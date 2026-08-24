@@ -1,0 +1,62 @@
+.projects-section {
+  padding: 80px 5%;
+}
+
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.filter-buttons button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 50px;
+  padding: 30px 20px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.project-card {
+  background-color: rgb(177, 177, 198);
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 30px;
+  transition: all 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 4px 15px rgba(57, 2, 108, 0.751);
+}
+
+.project-card h3 {
+  font-size: 24px;
+}
+
+.project-tags {
+  margin: 20px 0;
+}
+
+.tag {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 5px;
+  border-radius: 20px;
+  background: var(--primary);
+  color: white;
+}

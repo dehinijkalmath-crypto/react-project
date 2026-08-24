@@ -1,0 +1,21 @@
+.site-footer {
+  background-color: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 40px 5%;
+}
+
+.site-footer nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.site-footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--accent);
+}

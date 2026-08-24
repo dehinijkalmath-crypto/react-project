@@ -1,0 +1,228 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background-color: var(--primary);
+  position: relative;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 48px;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.theme-toggle,
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.theme-toggle {
+  font-size: 25px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 88px;
+    left: 0;
+    width: 100%;
+    background: #01090f;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 20px;
+  }
+}/* =========================
+   LIGHT THEME
+========================= */
+
+:root {
+  --primary: rgb(196, 31, 97);
+  --accent: rgb(14, 14, 14);
+
+  --text: rgb(31, 114, 122);
+
+  --background: rgb(243, 244, 230);
+
+  --card: #ffffff;
+
+  --card-text: #222222;
+
+  --input-bg: #ffffff;
+
+  --border: #dddddd;
+}
+
+
+/* =========================
+   DARK THEME
+========================= */
+
+body[data-theme="dark"] {
+  --primary: #16004d;
+  --accent: #ffffff;
+
+  --text: #ffffff;
+
+  --background: #121212;
+
+  --card: #222222;
+
+  --card-text: #ffffff;
+
+  --input-bg: #2b2b2b;
+
+  --border: #555555;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  background-color: var(--primary);
+  transition: all 0.3s ease;
+}
+
+.nav-links a {
+  color: var(--accent);
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+
+/* =========================
+   THEME BUTTON
+========================= */
+
+.theme-toggle {
+  background: transparent;
+  border: none;
+  color: var(--accent);
+  font-size: 25px;
+  cursor: pointer;
+}
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.menu-toggle {
+  background: transparent;
+  border: none;
+  color: var(--accent);
+  font-size: 30px;
+  cursor: pointer;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.project-card,
+.skill-item {
+  background-color: var(--card);
+  color: var(--card-text);
+  border: 2px solid var(--border);
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+input,
+textarea,
+select {
+  background-color: var(--input-bg);
+  color: var(--card-text);
+  border: 2px solid var(--border);
+}
+
+
+/* =========================
+   SMOOTH THEME CHANGE
+========================= */
+
+body,
+.navbar,
+.project-card,
+.skill-item,
+input,
+textarea,
+select,
+button,
+a {
+  transition: all 0.3s ease;
+}
